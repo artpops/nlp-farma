@@ -1,4 +1,4 @@
-# ML Farma — Symptom-Drug Advisor
+## NLP Farma — Symptom-Drug Advisor
 
 Hibridni NLP savetnik za simptome i lekove na srpskom jeziku, offline-first.
 
@@ -106,16 +106,6 @@ python scripts/run_eval.py --no-embeddings
 python scripts/run_eval.py --no-embeddings --limit 20
 ```
 
-Ostalo (`Makefile`):
-
-```bash
-make run      # primer CLI poziva
-make test     # pytest
-make eval     # evaluacija
-make ui       # streamlit
-make prepare  # priprema podataka
-make ablation # ablation eksperimenti
-```
 
 ## Podaci
 
