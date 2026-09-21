@@ -1,0 +1,70 @@
+{"text_sr": "boli me grlo i imam temperaturu 38", "gold_symptoms": ["bol_u_grlu", "temperatura"], "gold_disease": "D_FARINGITIS"}
+{"text_sr": "Imam temperaturu 38.5, jeza me hvata i bole me mišići", "gold_symptoms": ["temperatura", "jeza", "bol_u_misicima"], "gold_disease": "D_GRIP"}
+{"text_sr": "curi mi nos, kijam stalno i svrbe me oči, proleće je", "gold_symptoms": ["iscedak_iz_nosa", "kijanje", "svrab_oka"], "gold_disease": "D_ALERG_RINITIS"}
+{"text_sr": "Kašljem već pet dana i iskašljavam šlajm", "gold_symptoms": ["kasalj", "iskasljavanje"], "gold_disease": "D_BRONHITIS"}
+{"text_sr": "Pritisak u sinusima i bol u čelu, nos mi zapušen", "gold_symptoms": ["pritisak_u_sinusima", "zapusen_nos", "glavobolja"], "gold_disease": "D_SINUSITIS"}
+{"text_sr": "Pulsira me u slepoočnici, muka mi je i smeta mi svetlo", "gold_symptoms": ["migrenozni_bol", "mucnina", "fotofobija"], "gold_disease": "D_MIGRENA"}
+{"text_sr": "Puca mi glava od stresa, vrat mi ukočen", "gold_symptoms": ["glavobolja", "bol_u_vratu"], "gold_disease": "D_TENZIONA"}
+{"text_sr": "Ne mogu da okrenem glavu, vrat mi se zgrčio i trnu mi ruke", "gold_symptoms": ["bol_u_vratu", "utrnulost"], "gold_disease": "D_CERVIKALNI"}
+{"text_sr": "Ukočio sam se u krstima, ne mogu da se ispravim", "gold_symptoms": ["bol_u_ledjima"], "gold_disease": "D_LUMBALNI"}
+{"text_sr": "Gori me želudac i vraća mi se kiselina posle jela", "gold_symptoms": ["gorusica", "tezina_posle_jela"], "gold_disease": "D_GERB"}
+{"text_sr": "Boli me stomak, muka mi je i povratio sam dva puta", "gold_symptoms": ["bol_u_stomaku", "mucnina", "povracanje"], "gold_disease": "D_GASTRITIS"}
+{"text_sr": "Naduvam se ko balon posle jela i stalno mi se podriguje", "gold_symptoms": ["nadutost", "podrigivanje", "tezina_posle_jela"], "gold_disease": "D_DISPEPSIJA"}
+{"text_sr": "Prebija me stomak pa proliv pa zatvor, gasovi stalno", "gold_symptoms": ["bol_u_stomaku", "proliv", "zatvor", "nadutost"], "gold_disease": "D_IBS"}
+{"text_sr": "Proliv me ubi, ne silazim sa šolje i povraćam", "gold_symptoms": ["proliv", "povracanje", "bol_u_stomaku"], "gold_disease": "D_GASTROENTERITIS"}
+{"text_sr": "Peče me kad mokrim i trčim u wc svakih pola sata", "gold_symptoms": ["peckanje_pri_mokrenju", "cesto_mokrenje"], "gold_disease": "D_CISTITIS"}
+{"text_sr": "Puca mi uvo i imam temperaturu, ne čujem dobro", "gold_symptoms": ["bol_u_uvu", "temperatura"], "gold_disease": "D_OTITIS"}
+{"text_sr": "Grlo me grebe, ne mogu da gutam i imam temperaturu", "gold_symptoms": ["bol_u_grlu", "temperatura"], "gold_disease": "D_TONZILITIS"}
+{"text_sr": "Iskočile mi fleke po koži i svrbi me da poludim", "gold_symptoms": ["osip", "svrab"], "gold_disease": "D_URTIKARIJA"}
+{"text_sr": "Sve me boli posle treninga, mišići mi se raspadaju", "gold_symptoms": ["bol_u_misicima", "umor"], "gold_disease": "D_MIJALGIJA"}
+{"text_sr": "Ne mogu da dignem ruku, rame me ubija", "gold_symptoms": ["bol_u_ramenu"], "gold_disease": "D_TENDINITIS"}
+{"text_sr": "Prevрćem se celu noć, ne spavam nikako", "gold_symptoms": ["nesanica"], "gold_disease": "D_NESANICA"}
+{"text_sr": "Mučim se u wc-u, stolice nema danima i nadut sam", "gold_symptoms": ["zatvor", "nadutost"], "gold_disease": "D_ZATVOR"}
+{"text_sr": "боли ме грло и имам температуру", "gold_symptoms": ["bol_u_grlu", "temperatura"], "gold_disease": "D_FARINGITIS"}
+{"text_sr": "цури ми нос и кијам, очи ми сузе", "gold_symptoms": ["iscedak_iz_nosa", "kijanje", "suzenje_oka"], "gold_disease": "D_ALERG_RINITIS"}
+{"text_sr": "nemam temperaturu ali me boli grlo i kašljem", "gold_symptoms": ["bol_u_grlu", "kasalj"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "Nemam proliv, samo me boli stomak i imam gasove", "gold_symptoms": ["bol_u_stomaku", "nadutost"], "gold_disease": "D_IBS"}
+{"text_sr": "boli me glava i povraca mi se, ne mogu na svjetlo", "gold_symptoms": ["glavobolja", "povracanje", "fotofobija"], "gold_disease": "D_MIGRENA"}
+{"text_sr": "boli me grlo i imam tempraturu 38", "gold_symptoms": ["bol_u_grlu", "temperatura"], "gold_disease": "D_FARINGITIS"}
+{"text_sr": "kashljem i curi mi nos, glava me boli", "gold_symptoms": ["kasalj", "iscedak_iz_nosa", "glavobolja"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "boli me stoomak i imam proliiv", "gold_symptoms": ["bol_u_stomaku", "proliv"], "gold_disease": "D_GASTROENTERITIS"}
+{"text_sr": "Imam jak bol u grudima i gušenje, hladan znoj me oblio", "gold_symptoms": ["bol_u_grudima_blaga"], "gold_disease": "D_BRONHITIS"}
+{"text_sr": "Oduzetost ruke i trnjenje pola tela, iznenada", "gold_symptoms": ["utrnulost"], "gold_disease": "D_CERVIKALNI"}
+{"text_sr": "Kašljem noću da ne spavam, guši me i pišti mi u grudima", "gold_symptoms": ["suvi_kasalj_nocni", "zvizdanje_u_grudima", "kasalj"], "gold_disease": "D_BRONHITIS"}
+{"text_sr": "Oči mi suze na vetar i crvene su ko u vampira, a nos curi", "gold_symptoms": ["suzenje_oka", "crvenilo_oka", "iscedak_iz_nosa"], "gold_disease": "D_KONJUKTIVITIS"}
+{"text_sr": "Imam aftu u ustima i suva su mi usta stalno", "gold_symptoms": ["suva_usta"], "gold_disease": "D_ORALNI"}
+{"text_sr": "Boli me zub na hladno, ne smem sladoled", "gold_symptoms": ["osetljivost_zuba"], "gold_disease": "D_ORALNI"}
+{"text_sr": "Desni mi otekle i bole me kad jedem", "gold_symptoms": ["upala_desni"], "gold_disease": "D_ORALNI"}
+{"text_sr": "Imam temperaturu 37.5, grebucka me grlo i kijam pomalo, inače sam dobro i radim od kuće već treći dan za redom", "gold_symptoms": ["bol_u_grlu", "temperatura", "kijanje"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "Već nedelju dana: zapušen nos ujutru, pritisak u čelu popodne, a uveče me zaboli glava; temperatura 37.2", "gold_symptoms": ["zapusen_nos", "pritisak_u_sinusima", "glavobolja", "temperatura"], "gold_disease": "D_SINUSITIS"}
+{"text_sr": "Posle masne večere kamen mi stoji na želucu, podrigujem se i peče me", "gold_symptoms": ["tezina_posle_jela", "podrigivanje", "gorusica"], "gold_disease": "D_DISPEPSIJA"}
+{"text_sr": "Ujutru me peta ubija čim stanem, popodne prođe", "gold_symptoms": ["bol_u_peti"], "gold_disease": "D_LUMBALNI"}
+{"text_sr": "Ruke mi ledene i stalno mi se spava, glava me boli", "gold_symptoms": ["hladne_ruke_noge", "umor", "glavobolja"], "gold_disease": "D_TENZIONA"}
+{"text_sr": "Ne osećam ni beli luk, miris mi nestao posle prehlade", "gold_symptoms": ["gubitak_cuja_mirisa"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "Sve mi bljutavo, ne osećam ni so", "gold_symptoms": ["gubitak_ukusa"], "gold_disease": "D_GASTRITIS"}
+{"text_sr": "Srce hoće da mi iskoči kad legnem i zadišem se uz stepenice", "gold_symptoms": ["palpitacije", "kratak_dah"], "gold_disease": "D_BRONHITIS"}
+{"text_sr": "Noge mi uveče ko balvani, cipele me stežu", "gold_symptoms": ["otok_nogu"], "gold_disease": "D_URTIKARIJA"}
+{"text_sr": "Znojim se i kad mirujem i budim se mokar", "gold_symptoms": ["preznojavanje"], "gold_disease": "D_GRIP"}
+{"text_sr": "Usta mi suva ko barut, stalno sam žedan", "gold_symptoms": ["suva_usta"], "gold_disease": "D_GASTRITIS"}
+{"text_sr": "Žmarci mi idu niz ruku i vrat me koči", "gold_symptoms": ["utrnulost", "bol_u_vratu"], "gold_disease": "D_CERVIKALNI"}
+{"text_sr": "Kleca mi koleno i ne mogu da čučnem", "gold_symptoms": ["bol_u_kolenu"], "gold_disease": "D_LUMBALNI"}
+{"text_sr": "Uhvatio me grč u listu noću, ne popušta", "gold_symptoms": ["grcevi_u_misicima"], "gold_disease": "D_MIJALGIJA"}
+{"text_sr": "Peče me čmar i imam krv na papiru povremeno", "gold_symptoms": ["hemoroidi_tegobe"], "gold_disease": "D_IBS"}
+{"text_sr": "Imam temperaturu i boli me grlo, ali nemam kašalj", "gold_symptoms": ["temperatura", "bol_u_grlu"], "gold_disease": "D_FARINGITIS"}
+{"text_sr": "Kašalj me davi noću i ne spavam, ali nemam temperaturu", "gold_symptoms": ["suvi_kasalj_nocni", "kasalj"], "gold_disease": "D_BRONHITIS"}
+{"text_sr": "Boli me grlo, curi mi nos i imam temperaturu 38.2, a juče sam bio na vetru bez jakne", "gold_symptoms": ["bol_u_grlu", "iscedak_iz_nosa", "temperatura"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "deca mi kaslju i kijaju, a i mene grebe grlo", "gold_symptoms": ["kasalj", "kijanje", "bol_u_grlu"], "gold_disease": "D_PREHLADA"}
+{"text_sr": "boli me glava od sinusa i pritisak u celu, nos zapusen skroz", "gold_symptoms": ["glavobolja", "pritisak_u_sinusima", "zapusen_nos"], "gold_disease": "D_SINUSITIS"}
+{"text_sr": "svrbe me oči i kijam čim izađem napolje na polen", "gold_symptoms": ["svrab_oka", "kijanje"], "gold_disease": "D_ALERG_RINITIS"}
+{"text_sr": "povratio sam i imam proliv posle roštilja", "gold_symptoms": ["povracanje", "proliv"], "gold_disease": "D_GASTROENTERITIS"}
+{"text_sr": "peče pri mokrenju i boli me dole stomak", "gold_symptoms": ["peckanje_pri_mokrenju", "bol_u_donjem_stomaku"], "gold_disease": "D_CISTITIS"}
+{"text_sr": "osecam stalnu anksioznost i brinem non stop, ne mogu da spavam", "gold_symptoms": ["anksioznost", "prekomerna_briga", "nesanica"], "gold_disease": "D_ANKSIOZNOST"}
+{"text_sr": "sve mi je sivo, nista me ne raduje i povlacim se od ljudi", "gold_symptoms": ["depresivno_raspolozenje", "gubitak_interesovanja", "socijalno_povlacenje"], "gold_disease": "D_DEPRESIJA"}
+{"text_sr": "odjednom me uhvati panika, srce mi lupa i ostajem bez daha", "gold_symptoms": ["napad_panike", "palpitacije", "kratak_dah"], "gold_disease": "D_PANIKA"}
+{"text_sr": "pucam od stresa na poslu, sve me nervira i ne spavam", "gold_symptoms": ["stres", "razdrazljivost", "nesanica"], "gold_disease": "D_STRES"}
+{"text_sr": "sagoreo sam na poslu, baterije prazne mesecima, umoran sam stalno", "gold_symptoms": ["sagorevanje", "umor", "nesanica"], "gold_disease": "D_BURNOUT"}
+{"text_sr": "anksiozan sam i imam tremor, ali nemam temperaturu", "gold_symptoms": ["anksioznost"], "gold_disease": "D_ANKSIOZNOST"}
+{"text_sr": "osecam anksioznost i ne mogu da spavam", "gold_symptoms": ["anksioznost", "nesanica"], "gold_disease": "D_ANKSIOZNOST"}
+{"text_sr": "brinem se stalno i imam anksioznst", "gold_symptoms": ["anksioznost", "prekomerna_briga"], "gold_disease": "D_ANKSIOZNOST"}
+{"text_sr": "tuzan sam danima, nemam apetit i ne mogu da se koncentrisem, vec nedelju dana traje", "gold_symptoms": ["depresivno_raspolozenje", "gubitak_apetita", "poremecaj_koncentracije"], "gold_disease": "D_DEPRESIJA"}
+{"text_sr": "imam misli da se ubijem", "gold_symptoms": ["depresivno_raspolozenje"], "gold_disease": "D_DEPRESIJA"}

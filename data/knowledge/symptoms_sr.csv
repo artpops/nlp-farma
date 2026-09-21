@@ -1,0 +1,72 @@
+symptom_id,canonical_sr,synonyms_sr,colloquial_sr,icd10_hint,body_system
+temperatura,povišena temperatura,povišena tjelesna temperatura|temperatura 38|fibra|vrućica|imam temperaturu,joj imam temperaturu|kuvam kolko sam vruć|gorim,R50,opšti
+jeza,jeza i drhtavica,drhtavica|tresavica|tresem se|podilazi me jeza,tresem se ko prut|treskavica,R68.83,opšti
+bol_u_grlu,bol u grlu,boli me grlo|grebe me grlo|peckanje u grlu|upala grla|grlobolja|bolno gutanje,grebucka me grlo|grebanje grla|ne mogu da gutam kolko me grlo boli,J02,respiratorni
+kasalj,kašalj,kašljem|kašljucanje|suvi kašalj|nadražajni kašalj,guši me kašalj|zakasljavam se|kašljem ko magarac,R05,respiratorni
+iskasljavanje,iskašljavanje sekreta,iskašljavam šlajm|iskašljavam sekret|produktivan kašalj|šlajm u grlu,iskašljavam nešto žuto|krcim pa ispljunem,R09.3,respiratorni
+iscedak_iz_nosa,curenje iz nosa,sekret iz nosa|slinav nos|rinoreja|curi mi nos,curi mi nos ko česma|bale mi cure,J34.89,respiratorni
+zapusen_nos,zapušen nos,kongestija nosa|ne mogu da dišem na nos|začepljen nos,nos mi skroz čep|dišem na usta,J34.89,respiratorni
+kijanje,kijanje,kijam|kijavica|učestalo kijanje,kijam stalno|apćiha stalno,J30,respiratorni
+glavobolja,glavobolja,boli me glava|probada me glava|pritisak u glavi|lupa me glava,puca mi glava|razbija me glava|glava hoće da mi eksplodira,R51,nervni
+migrenozni_bol,pulsirajući bol u glavi,migrena|pulsiranje u glavi|bol u polovini glave|aura pred glavobolju,kuca mi u slepoočnici|boli me pola glave,G43,nervni
+fotofobija,osetljivost na svetlo,smeta mi svetlo|fotofobija|moram u mrak,svetlo me ubija,H53.14,nervni
+vrtoglavica,vrtoglavica,vrti mi se u glavi|nestabilnost|ljuljanje|muti mi se,sve mi se okreće|kao da ću da padnem,R42,nervni
+umor,umor i malaksalost,malaksalost|iscrpljenost|bez energije|klonulost,mrtav sam umoran|nemam snage ni za šta|vučem se,R53,opšti
+bol_u_misicima,bol u mišićima,bole me mišići|mijalgija|upala mišića|muskulfiber,sve me boli posle treninga|mišići mi se raspadaju,M79.1,mišićno-koštani
+bol_u_zglobovima,bol u zglobovima,bole me zglobovi|artralgija|ukočeni zglobovi|otok zgloba,krckaju me zglobovi|zglobovi me bole na promenu vremena,M25.5,mišićno-koštani
+bol_u_ledjima,bol u leđima,boli me krsta|bol u krstima|lumbago|ukrštena leđa,ukočio sam se u krstima|ne mogu da se ispravim,M54.5,mišićno-koštani
+bol_u_vratu,bol u vratu,boli me vrat|ukočen vrat|cervikalni bol|koči me vrat,ne mogu da okrenem glavu|vrat mi se zgrčio,M54.2,mišićno-koštani
+bol_u_ramenu,bol u ramenu,boli me rame|zategnutost u ramenu|tendinitis ramena,ne mogu da dignem ruku|rame me ubija,M75,mišićno-koštani
+bol_u_kolenu,bol u kolenu,boli me koleno|otok kolena|škripanje u kolenu,kleca mi koleno|ne mogu da čučnem,M25.56,mišićno-koštani
+grcevi_u_misicima,grčevi u mišićima,grč u listu|stezanje mišića|grčevi noću,uhvatio me grč|grč mi ne popušta,R25.2,mišićno-koštani
+utrnulost,trnjenje ruku i nogu,trnu mi ruke|parestezija|žmarci|utrnulost prstiju,žmarci mi idu niz ruku|osećam mravinjanje,R20.2,nervni
+gorusica,gorušica,zgaravica|peče me želudac|kiselina mi se vraća|žarenje iza grudne kosti,gori me želudac|vata mi se kiselina,R12,digestivni
+bol_u_stomaku,bol u stomaku,boli me stomak|grčevi u stomaku|abdominalni bol|čupanje u stomaku,previja me stomak|boli me trbuh,R10,digestivni
+mucnina,mučnina,muka mi je|nagon na povraćanje|slabo mi je|gadjenje,prikipi mi muka|sloši mi se,R11.0,digestivni
+povracanje,povraćanje,povratio sam|bljuvanje|povraća mi se,izbacio sam sve iz sebe,R11.1,digestivni
+proliv,proliv,dijareja|retka stolica|česta stolica|vodenasta stolica,ne silazim sa šolje|proliv me ubi,K59.1,digestivni
+zatvor,zatvor,opstipacija|neredovna stolica|tvrda stolica|ne mogu u wc,mučim se u wc-u|stolice nema danima,K59.0,digestivni
+nadutost,nadutost,nadimanje|gasovi|flatulencija|napet stomak,naduvam se ko balon|stalno puštam gasove,R14,digestivni
+gubitak_apetita,gubitak apetita,nemam apetit|ne jede mi se|odbojnost prema hrani,ništa mi se ne jede|hrana mi se gadi,R63.0,digestivni
+tezina_posle_jela,težina posle jela,dispepsija|teško varenje|pritisak posle jela|sporo varenje,kamen mi stoji na želucu|jedem pa mi teško,K30,digestivni
+podrigivanje,podrigivanje,podrigujem|vraćanje vazduha|riganje,stalno mi se podriguje,R14.2,digestivni
+preznojavanje,pojačano znojenje,znojenje|noćno znojenje|preznojavam se|hladan znoj,budim se mokar|znojim se i kad mirujem,R61,opšti
+osip,osip po koži,crvenilo po koži|koprivnjača|urtikarija|bubuljice po telu,iskočile mi fleke|osuo sam se,R21,koža
+svrab,svrab kože,svrbi me koža|pruritus|češem se|svrab po telu,svrbi me da poludim|ne mogu da prestanem da se češem,L29,koža
+svrab_oka,svrab očiju,svrbe me oči|peckanje očiju|iritacija očiju,trljam oči non stop|oči me svrbe na polen,H10.1,oko
+suzenje_oka,suzenje očiju,suze mi oči|vodene oči|plačne oči,oči mi suze na vetar,H04.2,oko
+crvenilo_oka,crvenilo očiju,crvene oči|konjunktivitis crvenilo|krvave oči,oči mi ko u vampira,H10.0,oko
+bol_u_uvu,bol u uvu,boli me uvo|pritisak u uvu|otitis bol|probadanje u uvu,puca mi uvo|ne čujem na jedno uvo,H92.0,uvo
+zujanje_u_usima,zujanje u ušima,tinitus|pištanje u ušima|brujanje u ušima,zuiji mi u ušima|čujem pištanje,H93.1,uvo
+pritisak_u_sinusima,pritisak u sinusima,bol u sinusima|pritisak u čelu|sinusna glavobolja|bol iznad očiju,puca mi čelo|sinusi mi puni,J01,respiratorni
+promuklost,promuklost,promukao glas|gubitak glasa|hrapav glas,nemam glasa|šapćem,R49.0,respiratorni
+suva_usta,suva usta,suše mi se usta|žeđ|lepljiva usta,usta mi suva ko barut|stalno sam žedan,R68.2,opšti
+cesto_mokrenje,učestalo mokrenje,idem često u wc|polakisurija|mokrim svaki čas|nagon na mokrenje,trčim u wc svakih pola sata|mokrim non stop,R35,urogenitalni
+peckanje_pri_mokrenju,peckanje pri mokrenju,peče pri mokrenju|dizurija|bol pri mokrenju|žarenje pri mokrenju,peče me kad mokrim|mokrenje me boli,R30.0,urogenitalni
+bol_u_donjem_stomaku,bol u donjem stomaku,pritisak dole|bol iznad bešike|tupi bol dole,boli me dole stomak|seva me dole,R10.3,urogenitalni
+nesanica,nesanica,ne mogu da spavam|poremećaj sna|budim se noću|isprekidan san,prevrćem se celu noć|ne spavam nikako,G47.0,nervni
+palpitacije,lupanje srca,preskakanje srca|palpitacije|ubrzan puls|srce mi lupa,srce hoće da mi iskoči|lupa mi kad legnem,R00.2,kardiovaskularni
+kratak_dah,kratak dah pri naporu,teško dišem|dispneja|ostajem bez daha|nedostatak vazduha,zadišem se uz stepenice|fali mi vazduha,R06.0,respiratorni
+zvizdanje_u_grudima,zviždanje u grudima,šištanje pri disanju|stridor blagi|pišti mi u grudima,čujem zvižduk kad dišem,R06.2,respiratorni
+otok_nogu,otok nogu,otiču mi noge|otok članaka|teške noge,uveče mi cipele tesne|noge mi ko balvani,R60.0,kardiovaskularni
+suvi_kasalj_nocni,noćni suvi kašalj,kašljem noću|nadražaj noću|guši me noću,ne spavam od kašlja|kašalj me davi noću,R05.8,respiratorni
+slabost_nogu,slabost u nogama,klecanje|teške noge|umor u nogama,ne drže me noge|nogama mi ponestaje snage,R53.1,mišićno-koštani
+bol_u_grudima_blaga,blagi pritisak u grudima,stezanje u grudima|nelagodnost u grudima|pritisak blagi,steže me u grudima kad se nerviram,R07.89,kardiovaskularni
+hladne_ruke_noge,hladne ruke i noge,hladni ekstremiteti|ledene ruke|slaba cirkulacija,ruke mi ledene|nogama mi hladno i leti,R68.82,kardiovaskularni
+gubitak_cuja_mirisa,gubitak čula mirisa,ne osećam mirise|anosmija|slab miris|ne mirišem ništa,ne osećam ni beli luk|miris mi nestao,R43.0,respiratorni
+gubitak_ukusa,gubitak ukusa,ne osećam ukus|ageuzija|hrana bez ukusa,sve mi bljutavo|ne osećam ni so,R43.2,digestivni
+upala_desni,bol u desnima,krvare mi desni|otekle desni|gingivitis bol,desni mi krvare kad perem zube,K05.1,usna duplja
+bol_u_zubu,bol u zubu,zubobolja|pulsira zub|bol na hladno|kvari mi zub,ne spavam od zuba|zub me razara,K08.88,usna duplja
+osetljivost_zuba,osetljivost zuba na hladno,seva zub na hladno|trne zub na slatko,ne smem sladoled|zub me preseče,K03.89,usna duplja
+hemoroidi_tegobe,tegobe sa hemoroidima,svrab čmara|pečenje čmara|krv na papiru|hemoroidi bole,peče me čmar|imam šuljeve,K64,digestivni
+bol_u_peti,bol u peti,petni trn|boli me peta ujutru|plantarni bol,ne mogu da stanem na petu|peta me ubija ujutru,M77.3,mišićno-koštani
+anksioznost,anksioznost,anksiozan sam|uznemirenost|strepnja|nervoza|teskoba,stalno sam na ivici|nervi mi rade|ne mogu da se smirim,F41.1,psihicko
+depresivno_raspolozenje,depresivno raspoloženje,depresivan sam|tužan sam|bezvoljnost|potištenost|utučenost,sve mi je sivo|nemam volje ni za šta|kao da me nema,F32.0,psihicko
+gubitak_interesovanja,gubitak interesovanja,ništa me ne raduje|anhedonija|gubitak volje|nezainteresovanost,ništa mi nije zanimljivo|niti me šta veseli,F32.0,psihicko
+napad_panike,napad panike,panika me hvata|napad straha|paroksizmalni strah|paničan napad,odjednom me uhvati panika|strah me parališe,F41.0,psihicko
+stres,osećaj stresa,pod stresom sam|napetost|ne mogu da se opustim|pritisak na poslu,pucam od stresa|stres me ubija|stalno sam napet,Z73.3,psihicko
+razdrazljivost,razdražljivost,razdražljiv sam|nervozan sam|kratak fitilj|iznerviranost,sve me nervira|planem za sitnicu,R45.4,psihicko
+poremecaj_koncentracije,poremećaj koncentracije,ne mogu da se koncentrišem|rasejanost|zaboravnost|dekoncentracija,misli mi lutaju|ne mogu da se saberem,R41.84,psihicko
+socijalno_povlacenje,socijalno povlačenje,povlačim se u sebe|izbegavam ljude|ne izlazim iz kuće|izolacija,nikog ne zovem|otkazujem viđanja,Z60.2,psihicko
+prekomerna_briga,prekomerna briga,preterana briga|katastrofične misli|brinem non stop|crne misli o budućnosti,samo vrtim najgore scenarije|briga me ne pušta,F41.1,psihicko
+sagorevanje,sindrom sagorevanja,burnout|emocionalna iscrpljenost poslom|iscrpljenost obavezama|premor,sagoreo sam na poslu|baterije su mi prazne mesecima,Z73.0,psihicko

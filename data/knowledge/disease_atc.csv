@@ -1,0 +1,52 @@
+disease_id,atc_prefix,therapy_role,otc_preferred,note
+D_PREHLADA,R02AA,symptomatic,1,Antiseptici za grlo za bol u grlu (npr. R02AA03).
+D_PREHLADA,N02BE,symptomatic,1,Paracetamol za temperaturu i bolove (N02BE01).
+D_GRIP,N02BE,symptomatic,1,Paracetamol prva linija za temperaturu i bolove.
+D_GRIP,M01AE,symptomatic,1,Ibuprofen kao alternativa za bolove i temperaturu.
+D_FARINGITIS,R02AA,symptomatic,1,Lokalni antiseptici za bol u grlu.
+D_FARINGITIS,N02BE,symptomatic,1,Sistemski analgetik/antipiretik.
+D_SINUSITIS,R01AD,symptomatic,0,Nazalni kortikosteroid uz lekarsku preporuku.
+D_SINUSITIS,N02BE,symptomatic,1,Za bol i temperaturu.
+D_ALERG_RINITIS,R06AX,symptomatic,1,"Oralni antihistaminici (loratadin/bilastin, R06AX)."
+D_ALERG_RINITIS,R06AE,symptomatic,1,Cetirizin/levocetirizin alternativa.
+D_ALERG_RINITIS,R01AD,symptomatic,0,Nazalni steroid za perzistentne simptome.
+D_BRONHITIS,R05CB,symptomatic,1,Mukolitici (acetilcistein R05CB01) za sekret.
+D_BRONHITIS,R05CA,symptomatic,1,Ekspektoransi za produktivan kašalj.
+D_KONJUKTIVITIS,S01GX,symptomatic,1,Antialergijski kapi za oči (olopatadin).
+D_KONJUKTIVITIS,R06AX,symptomatic,1,Sistemski antihistaminik kao dopuna.
+D_MIGRENA,N02BE,symptomatic,1,Paracetamol za blaže napade.
+D_MIGRENA,M01AE,symptomatic,1,NSAIL (ibuprofen) za migrenu.
+D_TENZIONA,N02BE,symptomatic,1,Paracetamol prva linija.
+D_TENZIONA,M01AE,symptomatic,1,Ibuprofen alternativa.
+D_CERVIKALNI,M01AE,symptomatic,1,NSAIL za bol u vratu.
+D_CERVIKALNI,M02AA,symptomatic,1,Topikalni NSAIL (diklofenak gel).
+D_LUMBALNI,M01AE,symptomatic,1,NSAIL za lumbalni bol.
+D_LUMBALNI,M02AA,symptomatic,1,Topikalna terapija kao dopuna.
+D_GASTRITIS,A02BC,symptomatic,0,Inhibitori protonske pumpe uz savet lekara.
+D_GASTRITIS,A02AD,symptomatic,1,Antacidi/alginati za brzo olakšanje.
+D_GERB,A02BC,symptomatic,0,PPI za kontrolu kiseline.
+D_GERB,A02AD,symptomatic,1,Antacidi za povremenu gorušicu.
+D_DISPEPSIJA,A02AD,symptomatic,1,Antacidi za dispeptične tegobe.
+D_DISPEPSIJA,A03AX,symptomatic,1,Simetikon za nadutost.
+D_IBS,A03AX,symptomatic,1,Spazmolitici/simetikon za grčeve i gasove.
+D_IBS,A07DA,symptomatic,0,"Loperamid samo za dijarealni oblik, kratkotrajno."
+D_GASTROENTERITIS,A07DA,symptomatic,0,"Loperamid za odrasle, uz rehidraciju."
+D_GASTROENTERITIS,N02BE,symptomatic,1,Paracetamol ako ima temperature (izbegavati NSAIL).
+D_CISTITIS,J01XE,causal,0,"Nitrofurantoin, samo na recept i uz lekarsku potvrdu."
+D_CISTITIS,N02BE,symptomatic,1,Za bol/temperaturu kao dopuna.
+D_OTITIS,N02BE,symptomatic,1,Analgetik/antipiretik za bol i temperaturu.
+D_OTITIS,J01CA,causal,0,"Amoksicilin samo na recept, odluka lekara."
+D_TONZILITIS,R02AA,symptomatic,1,Lokalna terapija za grlo.
+D_TONZILITIS,N02BE,symptomatic,1,Sistemski analgetik.
+D_DERMATITIS,D07AA,symptomatic,0,"Slabi topikalni kortikosteroid, kratko i lokalno."
+D_DERMATITIS,D04AA,symptomatic,1,Topikalni antihistaminik za svrab.
+D_URTIKARIJA,R06AX,symptomatic,1,Oralni antihistaminik prva linija.
+D_MIJALGIJA,M01AE,symptomatic,1,NSAIL za bol u mišićima.
+D_MIJALGIJA,M02AA,symptomatic,1,Topikalni NSAIL.
+D_TENDINITIS,M01AE,symptomatic,1,NSAIL sistemski kratkotrajno.
+D_TENDINITIS,M02AA,symptomatic,1,Topikalni NSAIL prva opcija.
+D_NESANICA,N05CH,symptomatic,0,"Melatonin za kratkotrajnu upotrebu, higijena sna primarna."
+D_ZATVOR,A06AD,symptomatic,1,Makrogol/laktuloza za opstipaciju.
+D_ZATVOR,A03AX,symptomatic,1,Simetikon ako dominira nadutost.
+D_ORALNI,A01AD,symptomatic,1,Stomatološki antiseptici i benzidamin za afte/desni.
+D_ORALNI,N02BE,symptomatic,1,Paracetamol za zubobolju kao premošćenje do stomatologa.

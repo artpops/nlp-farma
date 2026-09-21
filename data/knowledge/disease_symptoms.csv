@@ -1,0 +1,202 @@
+disease_id,disease_sr,symptom_id,weight,is_typical
+D_PREHLADA,Prehlada,iscedak_iz_nosa,0.9,1
+D_PREHLADA,Prehlada,zapusen_nos,0.85,1
+D_PREHLADA,Prehlada,kijanje,0.8,1
+D_PREHLADA,Prehlada,bol_u_grlu,0.6,0
+D_PREHLADA,Prehlada,glavobolja,0.4,0
+D_PREHLADA,Prehlada,temperatura,0.35,0
+D_PREHLADA,Prehlada,kasalj,0.5,0
+D_GRIP,Grip,temperatura,0.95,1
+D_GRIP,Grip,jeza,0.85,1
+D_GRIP,Grip,bol_u_misicima,0.85,1
+D_GRIP,Grip,umor,0.8,1
+D_GRIP,Grip,glavobolja,0.7,0
+D_GRIP,Grip,kasalj,0.6,0
+D_GRIP,Grip,bol_u_grlu,0.45,0
+D_FARINGITIS,Akutni faringitis,bol_u_grlu,0.95,1
+D_FARINGITIS,Akutni faringitis,temperatura,0.7,1
+D_FARINGITIS,Akutni faringitis,promuklost,0.5,0
+D_FARINGITIS,Akutni faringitis,glavobolja,0.4,0
+D_FARINGITIS,Akutni faringitis,umor,0.4,0
+D_FARINGITIS,Akutni faringitis,iscedak_iz_nosa,0.3,0
+D_SINUSITIS,Akutni sinusitis,pritisak_u_sinusima,0.95,1
+D_SINUSITIS,Akutni sinusitis,zapusen_nos,0.85,1
+D_SINUSITIS,Akutni sinusitis,glavobolja,0.75,1
+D_SINUSITIS,Akutni sinusitis,iscedak_iz_nosa,0.7,0
+D_SINUSITIS,Akutni sinusitis,temperatura,0.5,0
+D_SINUSITIS,Akutni sinusitis,kasalj,0.35,0
+D_ALERG_RINITIS,Alergijski rinitis,kijanje,0.9,1
+D_ALERG_RINITIS,Alergijski rinitis,iscedak_iz_nosa,0.9,1
+D_ALERG_RINITIS,Alergijski rinitis,svrab_oka,0.85,1
+D_ALERG_RINITIS,Alergijski rinitis,suzenje_oka,0.8,1
+D_ALERG_RINITIS,Alergijski rinitis,zapusen_nos,0.7,0
+D_ALERG_RINITIS,Alergijski rinitis,crvenilo_oka,0.5,0
+D_BRONHITIS,Akutni bronhitis,kasalj,0.95,1
+D_BRONHITIS,Akutni bronhitis,iskasljavanje,0.85,1
+D_BRONHITIS,Akutni bronhitis,temperatura,0.55,0
+D_BRONHITIS,Akutni bronhitis,umor,0.5,0
+D_BRONHITIS,Akutni bronhitis,kratak_dah,0.45,0
+D_BRONHITIS,Akutni bronhitis,bol_u_grudima_blaga,0.3,0
+D_KONJUKTIVITIS,Alergijski konjunktivitis,svrab_oka,0.95,1
+D_KONJUKTIVITIS,Alergijski konjunktivitis,crvenilo_oka,0.9,1
+D_KONJUKTIVITIS,Alergijski konjunktivitis,suzenje_oka,0.85,1
+D_KONJUKTIVITIS,Alergijski konjunktivitis,kijanje,0.5,0
+D_KONJUKTIVITIS,Alergijski konjunktivitis,iscedak_iz_nosa,0.4,0
+D_MIGRENA,Migrena,migrenozni_bol,0.95,1
+D_MIGRENA,Migrena,glavobolja,0.85,1
+D_MIGRENA,Migrena,mucnina,0.7,1
+D_MIGRENA,Migrena,fotofobija,0.75,1
+D_MIGRENA,Migrena,povracanje,0.4,0
+D_MIGRENA,Migrena,vrtoglavica,0.4,0
+D_TENZIONA,Tenziona glavobolja,glavobolja,0.9,1
+D_TENZIONA,Tenziona glavobolja,bol_u_vratu,0.6,0
+D_TENZIONA,Tenziona glavobolja,umor,0.5,0
+D_TENZIONA,Tenziona glavobolja,nesanica,0.45,0
+D_TENZIONA,Tenziona glavobolja,vrtoglavica,0.3,0
+D_CERVIKALNI,Cervikalni sindrom,bol_u_vratu,0.95,1
+D_CERVIKALNI,Cervikalni sindrom,glavobolja,0.6,0
+D_CERVIKALNI,Cervikalni sindrom,utrnulost,0.55,0
+D_CERVIKALNI,Cervikalni sindrom,bol_u_ramenu,0.5,0
+D_CERVIKALNI,Cervikalni sindrom,vrtoglavica,0.4,0
+D_LUMBALNI,Lumbalni sindrom,bol_u_ledjima,0.95,1
+D_LUMBALNI,Lumbalni sindrom,slabost_nogu,0.5,0
+D_LUMBALNI,Lumbalni sindrom,utrnulost,0.45,0
+D_LUMBALNI,Lumbalni sindrom,grcevi_u_misicima,0.4,0
+D_LUMBALNI,Lumbalni sindrom,bol_u_kolenu,0.3,0
+D_GASTRITIS,Akutni gastritis,bol_u_stomaku,0.9,1
+D_GASTRITIS,Akutni gastritis,mucnina,0.85,1
+D_GASTRITIS,Akutni gastritis,povracanje,0.7,1
+D_GASTRITIS,Akutni gastritis,gubitak_apetita,0.6,0
+D_GASTRITIS,Akutni gastritis,tezina_posle_jela,0.55,0
+D_GASTRITIS,Akutni gastritis,gorusica,0.5,0
+D_GERB,Gastroezofagealna refluksna bolest,gorusica,0.95,1
+D_GERB,Gastroezofagealna refluksna bolest,podrigivanje,0.7,1
+D_GERB,Gastroezofagealna refluksna bolest,bol_u_stomaku,0.6,0
+D_GERB,Gastroezofagealna refluksna bolest,tezina_posle_jela,0.55,0
+D_GERB,Gastroezofagealna refluksna bolest,promuklost,0.35,0
+D_GERB,Gastroezofagealna refluksna bolest,bol_u_grudima_blaga,0.3,0
+D_DISPEPSIJA,Funkcionalna dispepsija,tezina_posle_jela,0.9,1
+D_DISPEPSIJA,Funkcionalna dispepsija,nadutost,0.8,1
+D_DISPEPSIJA,Funkcionalna dispepsija,podrigivanje,0.65,0
+D_DISPEPSIJA,Funkcionalna dispepsija,bol_u_stomaku,0.6,0
+D_DISPEPSIJA,Funkcionalna dispepsija,mucnina,0.5,0
+D_DISPEPSIJA,Funkcionalna dispepsija,gubitak_apetita,0.4,0
+D_IBS,Sindrom iritabilnog creva,bol_u_stomaku,0.85,1
+D_IBS,Sindrom iritabilnog creva,nadutost,0.85,1
+D_IBS,Sindrom iritabilnog creva,proliv,0.7,0
+D_IBS,Sindrom iritabilnog creva,zatvor,0.65,0
+D_IBS,Sindrom iritabilnog creva,grcevi_u_misicima,0.2,0
+D_GASTROENTERITIS,Akutni gastroenteritis,proliv,0.9,1
+D_GASTROENTERITIS,Akutni gastroenteritis,mucnina,0.8,1
+D_GASTROENTERITIS,Akutni gastroenteritis,povracanje,0.8,1
+D_GASTROENTERITIS,Akutni gastroenteritis,bol_u_stomaku,0.75,0
+D_GASTROENTERITIS,Akutni gastroenteritis,temperatura,0.55,0
+D_GASTROENTERITIS,Akutni gastroenteritis,umor,0.5,0
+D_CISTITIS,Akutni cistitis,peckanje_pri_mokrenju,0.95,1
+D_CISTITIS,Akutni cistitis,cesto_mokrenje,0.9,1
+D_CISTITIS,Akutni cistitis,bol_u_donjem_stomaku,0.75,1
+D_CISTITIS,Akutni cistitis,temperatura,0.35,0
+D_CISTITIS,Akutni cistitis,bol_u_stomaku,0.3,0
+D_OTITIS,Akutni otitis media (blagi),bol_u_uvu,0.95,1
+D_OTITIS,Akutni otitis media (blagi),temperatura,0.6,0
+D_OTITIS,Akutni otitis media (blagi),glavobolja,0.45,0
+D_OTITIS,Akutni otitis media (blagi),zujanje_u_usima,0.4,0
+D_OTITIS,Akutni otitis media (blagi),umor,0.3,0
+D_TONZILITIS,Akutni tonzilitis,bol_u_grlu,0.95,1
+D_TONZILITIS,Akutni tonzilitis,temperatura,0.85,1
+D_TONZILITIS,Akutni tonzilitis,jeza,0.6,0
+D_TONZILITIS,Akutni tonzilitis,glavobolja,0.5,0
+D_TONZILITIS,Akutni tonzilitis,umor,0.5,0
+D_TONZILITIS,Akutni tonzilitis,promuklost,0.4,0
+D_DERMATITIS,Kontaktni dermatitis,osip,0.9,1
+D_DERMATITIS,Kontaktni dermatitis,svrab,0.9,1
+D_DERMATITIS,Kontaktni dermatitis,crvenilo_oka,0.2,0
+D_DERMATITIS,Kontaktni dermatitis,suva_usta,0.25,0
+D_DERMATITIS,Kontaktni dermatitis,preznojavanje,0.25,0
+D_DERMATITIS,Kontaktni dermatitis,umor,0.3,0
+D_URTIKARIJA,Akutna urtikarija,osip,0.9,1
+D_URTIKARIJA,Akutna urtikarija,svrab,0.85,1
+D_URTIKARIJA,Akutna urtikarija,otok_nogu,0.4,0
+D_URTIKARIJA,Akutna urtikarija,preznojavanje,0.3,0
+D_URTIKARIJA,Akutna urtikarija,crvenilo_oka,0.3,0
+D_URTIKARIJA,Akutna urtikarija,nesanica,0.25,0
+D_MIJALGIJA,Akutna mijalgija nakon napora,bol_u_misicima,0.95,1
+D_MIJALGIJA,Akutna mijalgija nakon napora,grcevi_u_misicima,0.6,0
+D_MIJALGIJA,Akutna mijalgija nakon napora,umor,0.55,0
+D_MIJALGIJA,Akutna mijalgija nakon napora,bol_u_zglobovima,0.4,0
+D_MIJALGIJA,Akutna mijalgija nakon napora,bol_u_ledjima,0.35,0
+D_MIJALGIJA,Akutna mijalgija nakon napora,slabost_nogu,0.35,0
+D_TENDINITIS,Tendinitis ramena,bol_u_ramenu,0.95,1
+D_TENDINITIS,Tendinitis ramena,bol_u_vratu,0.45,0
+D_TENDINITIS,Tendinitis ramena,bol_u_misicima,0.4,0
+D_TENDINITIS,Tendinitis ramena,utrnulost,0.35,0
+D_TENDINITIS,Tendinitis ramena,bol_u_zglobovima,0.3,0
+D_TENDINITIS,Tendinitis ramena,umor,0.25,0
+D_NESANICA,Blaga nesanica,nesanica,0.95,1
+D_NESANICA,Blaga nesanica,umor,0.7,0
+D_NESANICA,Blaga nesanica,glavobolja,0.5,0
+D_NESANICA,Blaga nesanica,vrtoglavica,0.35,0
+D_NESANICA,Blaga nesanica,palpitacije,0.3,0
+D_NESANICA,Blaga nesanica,preznojavanje,0.25,0
+D_ZATVOR,Funkcionalni zatvor,zatvor,0.95,1
+D_ZATVOR,Funkcionalni zatvor,nadutost,0.75,1
+D_ZATVOR,Funkcionalni zatvor,bol_u_stomaku,0.65,0
+D_ZATVOR,Funkcionalni zatvor,tezina_posle_jela,0.4,0
+D_ZATVOR,Funkcionalni zatvor,hemoroidi_tegobe,0.55,0
+D_ZATVOR,Funkcionalni zatvor,gubitak_apetita,0.3,0
+D_ORALNI,Blagi oralni problemi,upala_desni,0.9,1
+D_ORALNI,Blagi oralni problemi,bol_u_zubu,0.9,1
+D_ORALNI,Blagi oralni problemi,osetljivost_zuba,0.85,1
+D_ORALNI,Blagi oralni problemi,suva_usta,0.5,0
+D_ORALNI,Blagi oralni problemi,gubitak_ukusa,0.4,0
+D_ORALNI,Blagi oralni problemi,bol_u_grlu,0.3,0
+D_PREHLADA,Prehlada,gubitak_cuja_mirisa,0.4,0
+D_PREHLADA,Prehlada,suvi_kasalj_nocni,0.45,0
+D_PREHLADA,Prehlada,promuklost,0.35,0
+D_GRIP,Grip,preznojavanje,0.6,0
+D_GRIP,Grip,gubitak_apetita,0.5,0
+D_BRONHITIS,Akutni bronhitis,suvi_kasalj_nocni,0.7,0
+D_BRONHITIS,Akutni bronhitis,zvizdanje_u_grudima,0.6,0
+D_BRONHITIS,Akutni bronhitis,palpitacije,0.25,0
+D_BRONHITIS,Akutni bronhitis,promuklost,0.35,0
+D_GASTRITIS,Akutni gastritis,gubitak_ukusa,0.35,0
+D_GASTRITIS,Akutni gastritis,suva_usta,0.4,0
+D_TENZIONA,Tenziona glavobolja,hladne_ruke_noge,0.3,0
+D_LUMBALNI,Lumbalni sindrom,bol_u_peti,0.5,0
+D_CISTITIS,Akutni cistitis,bol_u_stomaku,0.3,0
+D_IBS,Sindrom iritabilnog creva,hemoroidi_tegobe,0.6,0
+D_GASTROENTERITIS,Akutni gastroenteritis,gubitak_apetita,0.5,0
+D_OTITIS,Akutni otitis media (blagi),zujanje_u_usima,0.4,0
+D_MIGRENA,Migrena,nesanica,0.3,0
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",anksioznost,0.95,1
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",prekomerna_briga,0.9,1
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",stres,0.8,1
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",nesanica,0.7,0
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",palpitacije,0.55,0
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",umor,0.5,0
+D_ANKSIOZNOST,"Generalizovani anksiozni poremećaj (blagi, informativno)",poremecaj_koncentracije,0.5,0
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),depresivno_raspolozenje,0.95,1
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),gubitak_interesovanja,0.9,1
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),socijalno_povlacenje,0.75,1
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),nesanica,0.65,0
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),umor,0.65,0
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),gubitak_apetita,0.55,0
+D_DEPRESIJA,Blaga depresivna epizoda (informativno),poremecaj_koncentracije,0.5,0
+D_PANIKA,"Panični poremećaj (blagi, informativno)",napad_panike,0.95,1
+D_PANIKA,"Panični poremećaj (blagi, informativno)",palpitacije,0.8,1
+D_PANIKA,"Panični poremećaj (blagi, informativno)",kratak_dah,0.7,1
+D_PANIKA,"Panični poremećaj (blagi, informativno)",vrtoglavica,0.55,0
+D_PANIKA,"Panični poremećaj (blagi, informativno)",prekomerna_briga,0.5,0
+D_PANIKA,"Panični poremećaj (blagi, informativno)",nesanica,0.4,0
+D_STRES,Akutna stresna reakcija,stres,0.95,1
+D_STRES,Akutna stresna reakcija,razdrazljivost,0.8,1
+D_STRES,Akutna stresna reakcija,nesanica,0.7,0
+D_STRES,Akutna stresna reakcija,glavobolja,0.55,0
+D_STRES,Akutna stresna reakcija,bol_u_misicima,0.45,0
+D_STRES,Akutna stresna reakcija,poremecaj_koncentracije,0.45,0
+D_BURNOUT,Sindrom sagorevanja,sagorevanje,0.95,1
+D_BURNOUT,Sindrom sagorevanja,umor,0.85,1
+D_BURNOUT,Sindrom sagorevanja,gubitak_interesovanja,0.6,0
+D_BURNOUT,Sindrom sagorevanja,nesanica,0.6,0
+D_BURNOUT,Sindrom sagorevanja,razdrazljivost,0.55,0
+D_BURNOUT,Sindrom sagorevanja,poremecaj_koncentracije,0.5,0

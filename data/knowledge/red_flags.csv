@@ -1,0 +1,20 @@
+pattern_sr,severity,action_message_sr
+bol u grudima,urgent,"Moguć akutni koronarni sindrom. Odmah Hitna pomoć 194, ne vozite sami."
+gušenje,urgent,Moguća opstrukcija disajnih puteva ili anafilaksa. Odmah 194.
+ostajem bez daha,urgent,Moguća respiratorna insuficijencija. Odmah lekar/194.
+gubitak svesti,urgent,"Sinkopa. Pozovite 194, ne ostavljajte osobu samu."
+oduzetost ruke,urgent,"Moguć moždani udar. Odmah 194, zabeležite vreme početka."
+trnjenje pola tela,urgent,Moguć moždani udar. Odmah 194.
+krv u stolici,urgent,Moguće gastrointestinalno krvarenje. Hitno lekaru.
+povraćanje krvi,urgent,Hematemeza. Odmah hitna pomoć.
+iskašljavanje krvi,urgent,Hemoptizija. Odmah lekaru.
+iznenadna najjača glavobolja,urgent,Moguće subarahnoidalno krvarenje. Odmah 194.
+dezorijentacija,urgent,Poremećaj svesti. Odmah lekaru.
+konvulzije,urgent,"Epileptički napad. Pozovite 194, zaštitite glavu."
+otok usana i jezika,urgent,"Moguća anafilaksa. Odmah 194, adrenalin ako je propisan."
+temperatura preko 40,urgent,Hiperpireksija. Hitno obaranje temperature i lekar.
+krvarenje ne staje,urgent,Nekontrolisano krvarenje. Kompresija i odmah 194.
+da se ubijem,urgent,Moguće suicidalne misli. Odmah pozovite Hitnu pomoć (194) ili krizni telefon. Ne ostajte sami — javite se bliskoj osobi ili lekaru.
+samoubistvo,urgent,Moguće suicidalne misli. Odmah Hitna pomoć (194). Potražite pomoć bliske osobe ili stručnjaka.
+secem se,urgent,Moguće samopovređivanje. Odmah se javite lekaru ili Hitnoj pomoći (194).
+povredjujem sebe,urgent,Moguće samopovređivanje. Odmah potražite pomoć lekara ili Hitne pomoći (194).
