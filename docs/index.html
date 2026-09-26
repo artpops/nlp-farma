@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Savetnik za farmako-terapiju: kako program radi</title>
+<style>
+  :root{
+    --plava:#1e40af; --svetlo:#eff6ff; --okvir:#bfdbfe;
+    --tekst:#1f2937; --siva:#6b7280; --pozadina:#f8fafc;
+    --zeleno:#047857; --crveno:#b91c1c; --narandzasto:#b45309;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--tekst); background:var(--pozadina); margin:0; line-height:1.65}
+  header{background:linear-gradient(135deg,#1e3a8a,#3b82f6); color:#fff;
+    padding:2.2rem 1rem 1.6rem}
+  .omot{max-width:1000px; margin:0 auto; padding:0 1rem}
+  header .omot{display:flex; gap:1.2rem; align-items:center}
+  header img{width:84px; height:84px; background:#fff; border-radius:12px; padding:6px}
+  header h1{margin:.1rem 0; font-size:1.7rem}
+  header p{margin:.2rem 0; opacity:.92}
+  nav{position:sticky; top:0; z-index:10; background:#fff;
+    border-bottom:1px solid var(--okvir); padding:.45rem 1rem; overflow-x:auto; white-space:nowrap}
+  nav a{color:var(--plava); text-decoration:none; margin-right:1rem; font-size:.92rem}
+  nav a:hover{text-decoration:underline}
+  main{max-width:1000px; margin:0 auto; padding:1rem 1rem 3rem}
+  section{background:#fff; border:1px solid #e5e7eb; border-radius:12px;
+    padding:1.4rem 1.5rem; margin:1.2rem 0}
+  h2{color:var(--plava); margin-top:0; font-size:1.35rem;
+    border-bottom:2px solid var(--okvir); padding-bottom:.4rem}
+  h3{color:#1e3a8a; margin-bottom:.4rem}
+  .karta{background:var(--svetlo); border:1px solid var(--okvir);
+    border-radius:10px; padding:1rem 1.1rem; margin:.8rem 0}
+  table{border-collapse:collapse; width:100%; margin:.7rem 0; font-size:.93rem}
+  th,td{border:1px solid #d1d5db; padding:.45rem .6rem; text-align:left}
+  th{background:var(--svetlo); color:var(--plava)}
+  code{background:#f1f5f9; padding:.1rem .35rem; border-radius:5px; font-size:.9em}
+  pre{background:#0f172a; color:#e2e8f0; padding:1rem; border-radius:10px;
+    overflow-x:auto; font-size:.88rem}
+  button{background:var(--plava); color:#fff; border:none; border-radius:8px;
+    padding:.55rem 1.1rem; font-size:.95rem; cursor:pointer; margin:.3rem .3rem .3rem 0}
+  button:hover{background:#1e3a8a}
+  button.sporedan{background:#fff; color:var(--plava); border:1px solid var(--plava)}
+  input[type=text], textarea{width:100%; padding:.55rem .7rem; font-size:1rem;
+    border:1px solid #cbd5e1; border-radius:8px; font-family:inherit}
+  textarea{min-height:70px; resize:vertical}
+  input[type=range]{width:220px; vertical-align:middle}
+  .rezultat{background:#f8fafc; border-left:4px solid var(--plava);
+    padding:.7rem 1rem; margin:.7rem 0; border-radius:0 8px 8px 0}
+  .tok{display:flex; flex-wrap:wrap; gap:.4rem; align-items:stretch; margin:.8rem 0}
+  .faza{flex:1 1 120px; background:var(--svetlo); border:1px solid var(--plava);
+    border-radius:10px; padding:.6rem; text-align:center; font-size:.86rem}
+  .faza b{display:block; color:var(--plava)}
+  .faza.aktivna{background:var(--plava); color:#fff}
+  .faza.aktivna b{color:#fff}
+  .strelica{align-self:center; color:var(--plava); font-weight:bold; font-size:1.2rem}
+  .formula{text-align:center; font-size:1.15rem; background:var(--svetlo);
+    border-radius:10px; padding:.9rem; margin:.8rem 0; overflow-x:auto}
+  .traka-okvir{background:#e5e7eb; border-radius:6px; height:22px; margin:.25rem 0}
+  .traka{height:22px; border-radius:6px; background:linear-gradient(90deg,#3b82f6,#1e40af);
+    text-align:right; color:#fff; font-size:.8rem; line-height:22px; padding-right:.5rem; min-width:44px}
+  .stat{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.7rem}
+  .stat div{background:var(--svetlo); border:1px solid var(--okvir);
+    border-radius:10px; padding:.7rem; text-align:center}
+  .stat b{display:block; font-size:1.5rem; color:var(--plava)}
+  .tokeni{display:flex; flex-wrap:wrap; gap:.4rem; margin:.7rem 0}
+  .token{border:1px solid #9ca3af; border-radius:7px; padding:.35rem .7rem; background:#fff}
+  .token.okidac{background:#fee2e2; border-color:var(--crveno); font-weight:bold}
+  .token.granica{background:#f3f4f6; border-style:dashed}
+  .klauze{display:flex; gap:.4rem; margin:.2rem 0 .8rem; font-size:.85rem}
+  .klauze span{flex:1; text-align:center; border-top:3px solid var(--plava); padding-top:.25rem}
+  .klauze span.crveno{border-color:var(--crveno)}
+  .stablo ul{list-style:none; padding-left:1.4rem; border-left:2px solid var(--okvir); margin:.3rem 0}
+  .stablo li{margin:.3rem 0}
+  figure{margin:1rem 0; text-align:center}
+  figure img{max-width:100%; border:1px solid #d1d5db; border-radius:10px}
+  figcaption{color:var(--siva); font-size:.88rem; margin-top:.4rem}
+  .upozorenje{border-left:4px solid var(--crveno); background:#fef2f2;
+    padding:.7rem 1rem; border-radius:0 8px 8px 0; margin:.7rem 0}
+  .dobro{border-left:4px solid var(--zeleno); background:#ecfdf5;
+    padding:.7rem 1rem; border-radius:0 8px 8px 0; margin:.7rem 0}
+  footer{text-align:center; color:var(--siva); padding:2rem 1rem; font-size:.88rem}
+  .dugmad{margin:.5rem 0}
+  .tacke span{display:inline-block; width:11px; height:11px; border-radius:50%;
+    background:#cbd5e1; margin-right:5px}
+  .tacke span.akt{background:var(--plava)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="omot">
+    <img src="pmf_logo.png" alt="Logo PMF">
+    <div>
+      <h1>Savetnik za farmako-terapiju: kako program radi</h1>
+      <p>Vizuelna demonstracija algoritama, tehnologija i evaluacije &bull; Damjan Halas, Prirodno-matematički fakultet, Univerzitet u Novom Sadu</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#sta-radi">Šta radi</a><a href="#tok">Tok</a><a href="#normalizacija">Normalizacija</a><a href="#leksikon">Leksikon</a><a href="#fazi">Fuzzy</a><a href="#tfidf">TF-IDF</a><a href="#negacija">Negacija</a><a href="#rangiranje">Rangiranje</a><a href="#atc">ATC</a><a href="#bezbednost">Bezbednost</a><a href="#tehnologije">Tehnologije</a><a href="#evaluacija">Evaluacija</a><a href="#galerija">Galerija</a><a href="#pokretanje">Pokretanje</a>
+</nav>
+
+<main>
+
+<section id="sta-radi">
+  <h2>1. Šta program radi</h2>
+  <p>Korisnik upiše tegobe onako kako bi ih ispričao, na primer
+  <i>imam temperaturu 38 i boli me grlo</i>. Program vrati prepoznate simptome,
+  tri hipoteze stanja sa skorovima i obrazloženjem, i lekove iz domaćeg registra
+  sa oznakama da li se izdaju bez recepta. Ako opis liči na hitno stanje, umesto
+  lekova stiže uput na Hitnu pomoć (194). Ako liči na tegobe iz područja mentalnog
+  zdravlja, stiže uput stručnjaku, bez predloga lekova. Sistem ne postavlja dijagnozu:
+  svuda se govori o rangiranim hipotezama (<code>condition_candidate</code>).</p>
+  <div class="karta"><b>Primer izlaza (skraćeno):</b> bol_u_grlu + temperatura &rarr;
+  Akutni faringitis 0.528 / Tonzilitis 0.494 / Grip 0.232 &rarr;
+  Avebol (N02BE51, OTC), Betadine (R02AA15, OTC), Argifen (M01AE01, OTC).</div>
+</section>
+
+<section id="tok">
+  <h2>2. Tok podataka kroz program</h2>
+  <p>Šest faza u nizu, plus bočna kočnica za hitnost. Klikni na dugme da prođeš kroz
+  pravi primer <i>boli me grlo i imam temperaturu 38</i> korak po korak.</p>
+  <div class="tok" id="tokFaze"></div>
+  <div class="dugmad">
+    <button id="korakBtn">Sledeći korak &rarr;</button>
+    <button class="sporedan" id="korakReset">Ispočetka</button>
+    <span class="tacke" id="korakTacke"></span>
+  </div>
+  <div class="rezultat" id="korakPrikaz">Pritisni dugme za prvi korak.</div>
+</section>
+
+<section id="normalizacija">
+  <h2>3. Normalizacija: od rečenice do uporedivog teksta</h2>
+  <p>Problem: <i>Boli me GRLO, imam Temperaturu 38!</i> i ćirilični dvojnik moraju završiti
+  u istom obliku, inače bi se sve dalje pisalo dvaput. Rešenje ima fiksan redosled:
+  preslovljavanje ćirilice u latinicu (dvoslovi <i>lj, nj, dž</i> pre pojedinačnih slova),
+  mala slova, skidanje dijakritika (<i>š</i> u <i>s</i>, <i>đ</i> u <i>d</i>), brisanje
+  interpunkcije. Probaј uživo:</p>
+  <textarea id="normUlaz">Boli me GRLO, imam Temperaturu 38!</textarea>
+  <div class="rezultat" id="normIzlaz"></div>
+</section>
+
+<section id="leksikon">
+  <h2>4. Leksikon umesto modela</h2>
+  <p>Skup koncepata je zatvoren (71 simptom), pa se oblici nabrajaju umesto da se uče:
+  svaki simptom ima kanonični naziv, sinonime sa padežima i kolokvijalizme. Time otpada
+  potreba za lematizerom od nekoliko stotina megabajta, a sistem ostaje potpuno offline.
+  Izvod iz stvarne tabele:</p>
+  <table>
+    <tr><th>ID</th><th>Kanonično</th><th>Primeri formi</th><th>Šifra</th></tr>
+    <tr><td><code>bol_u_grlu</code></td><td>bol u grlu</td><td>boli me grlo, grebe me grlo, grlobolja, dera me grlo…</td><td>J02</td></tr>
+    <tr><td><code>temperatura</code></td><td>povišena temperatura</td><td>imam temperaturu, groznica, vrućica…</td><td>R50</td></tr>
+    <tr><td><code>kasalj</code></td><td>kašalj</td><td>kašljem, suvi kašalj, nadražajni kašalj…</td><td>R05</td></tr>
+    <tr><td><code>anksioznost</code></td><td>anksioznost</td><td>anksiozan sam, strepnja, nervoza…</td><td>F41.1</td></tr>
+  </table>
+</section>
+
+<section id="fazi">
+  <h2>5. Fuzzy: hvatanje slovnih grešaka</h2>
+  <p>Rečnik ne vidi tipfelere poput <i>tempraturu</i>. Zato se prozori teksta porede
+  Levenštejnovom sličnošću (broj poklopljenih znakova $M$):</p>
+  <div class="formula">ratio(a, b) = 100 &middot; 2M / (|a| + |b|)</div>
+  <p>Ključno otkriće projekta: stroga mera pobeđuje tolerantnu. Tolerantna WRatio paru
+  <i>svrbe me oči / boli me</i> daje 85.5 (zajedničko <i>me</i> dominira), strogi ratio daje
+  42.1 i ispravno odbacuje. Prag je 85: propušta <i>tempraturu</i> (85.7), zaustavlja
+  <i>boli me glava → boli me grlo</i> (80.0). Probaj i sam (ulaz se normalizuje kao u programu):</p>
+  <input type="text" id="fzA" value="tempraturu"> <input type="text" id="fzB" value="temperatura">
+  <div class="dugmad">
+    <button class="sporedan" data-fz="tempraturu|temperatura">tempraturu / temperatura</button>
+    <button class="sporedan" data-fz="svrbe me oči|boli me">svrbe me oči / boli me</button>
+    <button class="sporedan" data-fz="boli me glava|boli me grlo">boli me glava / boli me grlo</button>
+  </div>
+  <div class="rezultat" id="fzIzlaz"></div>
+</section>
+
+<section id="tfidf">
+  <h2>6. TF-IDF semantika: hvatanje parafraza</h2>
+  <p>Kad rečnik i fuzzy zakažu (obrnut red reči, prepričan opis), tekst i simptom se porede
+  kao vektori. Težina termina je <i>tf &middot; log(N/df)</i>: retki, diskriminativni termini
+  vrede više. Indeksiranje ide preko karakterskih 3-5-grama, pa se padežne razlike apsorbuju
+  bez stemera. Sličnost je kosinusna, prag 0.35. Uprošćena demonstracija na nivou reči
+  (program koristi slovne n-grame):</p>
+  <label>Upit: <input type="text" id="tfq" value="grlo me boli"></label>
+  <div class="rezultat" id="tfIzlaz"></div>
+  <p style="color:var(--siva); font-size:.9rem">Korpus: tri kratka dokumenta (boli me grlo / curi mi nos / boli me glava).
+  Stvarni sistem poredi ceo opis sa konkatenacijom do 4 forme po simptomu.</p>
+</section>
+
+<section id="negacija">
+  <h2>7. Negacija: <i>nemam temperaturu</i> nije simptom</h2>
+  <p>Okidač (<i>ne, nemam, bez…</i>) negira pojmove u naredna 4 tokena. Rastavno <i>ali</i>
+  resetuje doseg, pa drugi deo ostaje afirmativan. Izuzetak: <i>ne boli me glava</i> znači
+  da glava boli.</p>
+  <div class="tokeni">
+    <span class="token okidac">nemam</span><span class="token">temperaturu</span><span class="token granica">ali</span><span class="token">me</span><span class="token">boli</span><span class="token">grlo</span>
+  </div>
+  <div class="klauze"><span class="crveno">klauza 1: negirano (temperatura)</span><span>klauza 2: afirmativno (bol u grlu)</span></div>
+</section>
+
+<section id="rangiranje">
+  <h2>8. Rangiranje: pokrivanje profila</h2>
+  <p>Opis pacijenta je uvek delimičan, pa se meri pokrivenost onoga što jeste rečeno,
+  a ne kažnjava ono što nije. Za stanje $d$, skup prepoznatih simptoma $M$ sa
+  pouzdanostima $c$ i profil sa težinama $w$:</p>
+  <div class="formula">S(d) = &Sigma;(w &middot; c) / &Sigma;(w) + 0.01 &middot; T</div>
+  <p>gde je $T$ broj pogođenih tipičnih simptoma. Pomeri klizače (pouzdanosti) za faringitis
+  (težine 0.95 i 0.70, zbir svih 3.25, oba tipična) i gledaj račun uživo:</p>
+  <label>bol u grlu: <input type="range" id="rk1" min="0" max="1" step="0.05" value="1"> <b id="rk1v">1.00</b></label><br>
+  <label>temperatura: <input type="range" id="rk2" min="0" max="1" step="0.05" value="1"> <b id="rk2v">1.00</b></label>
+  <div class="rezultat" id="rkIzlaz"></div>
+</section>
+
+<section id="atc">
+  <h2>9. Od hipoteze do leka: ATC most</h2>
+  <p>Registar ne sadrži indikacije, pa se stanju dodeli ATC prefiks, a kandidat je svaki
+  zapis čiji kod tim prefiksom počinje. Primer hijerarhije:</p>
+  <div class="stablo"><ul>
+    <li><b>N</b> nervni sistem<ul>
+      <li><b>N02</b> analgetici<ul>
+        <li><b>N02B</b> anilidi<ul>
+          <li><b>N02BE</b> paracetamol<ul><li><b>N02BE01</b> konkretan lek</li></ul></li>
+        </ul></li>
+      </ul></li>
+    </ul></li>
+  </ul></div>
+  <p>Skor leka spaja skor hipoteze, OTC bonus (režim BR, bez recepta) i važenje rešenja.
+  Pošto paracetamol ima 83 zapisa a nitrofurantoin 7, uvedena je raznovrsnost: deduplikacija
+  po proizvodu (pakovanje se ignoriše) i najviše dva leka po ATC grupi kružnim uzimanjem.
+  Tipična rečenica razloga: <i>Za hipotezu 'Akutni faringitis' (D_FARINGITIS, skor 0.53),
+  ATC N02BE51 (OTC; rešenje važi; symptomatic).</i></p>
+</section>
+
+<section id="bezbednost">
+  <h2>10. Bezbednost: tri kočnice</h2>
+  <div class="upozorenje"><b>1. Crvene zastavice (19 obrazaca):</b> bol u grudima, gušenje, neurološki
+  ispadi, krvarenja, izrazi samopovređivanja. Terapija se preskače, sledi uput na 194.
+  Primer: <i>imam misli da se ubijem</i> daje zastavicu i nula lekova.</div>
+  <div class="karta"><b>2. Mentalno zdravlje bez lekova:</b> 5 hipoteza (anksioznost, depresija, panika,
+  stres, sagorevanje) se prepoznaje, ali lekovi se nikada ne predlažu. Primer:
+  <i>stalno sam anksiozan, brinem non stop i ne spavam</i> daje D_ANKSIOZNOST 0.285,
+  nula lekova i uput stručnjaku.</div>
+  <div class="dobro"><b>3. Disclaimer</b> na svakom izlazu: informativni predlog, nije dijagnoza.</div>
+</section>
+
+<section id="tehnologije">
+  <h2>11. Tehnologije i razlog svake</h2>
+  <table>
+    <tr><th>Tehnologija</th><th>Uloga</th><th>Zašto baš ona</th></tr>
+    <tr><td>Python 3.10+</td><td>ceo sistem</td><td>čitljivost, standard za NLP prototipove</td></tr>
+    <tr><td>scikit-learn (TF-IDF)</td><td>semantika</td><td>stabilna implementacija, bez modela, offline</td></tr>
+    <tr><td>RapidFuzz</td><td>tipfeleri</td><td>Levenštejn u C-u, brz, bez zavisnosti</td></tr>
+    <tr><td>Streamlit</td><td>UI</td><td>interfejs u jednom fajlu, bez frontenda</td></tr>
+    <tr><td>CSV / JSONL / JSON</td><td>znanje</td><td>čitljivo i neprogrameru, verzionira se u gitu</td></tr>
+    <tr><td>matplotlib, pytest</td><td>eval, testovi</td><td>standardni, reproducibilni, offline</td></tr>
+    <tr><td>LaTeX (MiKTeX)</td><td>rad</td><td>formule, tabele i literatura na akademskom nivou</td></tr>
+  </table>
+  <p>Zajednički imenilac: sve radi offline, ima zakucanu verziju i ne traži nalog, ključ ni grafičku karticu.</p>
+</section>
+
+<section id="evaluacija">
+  <h2>12. Evaluacija: šta brojevi znače</h2>
+  <p>Automatski, offline, nad 70 ručno pisanih slučajeva (tipfeleri, ćirilica, negacije).</p>
+  <div class="stat">
+    <div><b>0.951</b>preciznost</div><div><b>0.779</b>odziv</div><div><b>0.856</b>F1</div>
+    <div><b>0.70</b>Top-1</div><div><b>0.90</b>Top-3</div><div><b>0.808</b>MRR</div>
+  </div>
+  <h3>Ablacija ekstrakcije (RQ1)</h3>
+  <div>rečnik 0.798<div class="traka-okvir"><div class="traka" style="width:79.8%">0.798</div></div></div>
+  <div>rečnik + fuzzy 0.825<div class="traka-okvir"><div class="traka" style="width:82.5%">0.825</div></div></div>
+  <div>puna kaskada 0.882<div class="traka-okvir"><div class="traka" style="width:88.2%">0.882</div></div></div>
+  <p>Svaki sloj dodaje: fuzzy hvata tipfelere, TF-IDF parafraze. Top-1 od 0.70 odražava leksičko
+  susedstvo (faringitis, tonzilitis i prehlada dele grlo i temperaturu), pa sistem izveštava trojku.</p>
+</section>
+
+<section id="galerija">
+  <h2>13. Galerija: sesija uživo</h2>
+  <p>Ulaz sa namernim tipfelerom: <i>imam temperaturu 38 i boli me grlo i malaksalo sam</i>.</p>
+  <figure><img src="SC1.png" alt="Unos i podešavanja"><figcaption>Unos i podešavanja (offline režim, 3 hipoteze, 5 lekova).</figcaption></figure>
+  <figure><img src="SC2.png" alt="Simptomi i hipoteze"><figcaption>Dva rečnička pogotka 1.00 i fuzzy pogodak <i>malaksalo → umor</i> 0.90; hipoteze sa doprinosima.</figcaption></figure>
+  <figure><img src="SC3.png" alt="Dijagram skorova"><figcaption>Stubičasti dijagram: dve bliske vodeće hipoteze i slabiji grip.</figcaption></figure>
+  <figure><img src="SC4.png" alt="Predloženi lekovi"><figcaption>Lekovi: mešavina mehanizama sa obrazloženjima (posledica kružne raznovrsnosti).</figcaption></figure>
+</section>
+
+<section id="pokretanje">
+  <h2>14. Pokretanje programa</h2>
+  <pre>python -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+$env:PYTHONPATH = 'src'
+python -m sda.cli --text "boli me grlo i imam temperaturu 38"</pre>
+  <pre>streamlit run src/sda/ui/streamlit_app.py   # UI, port 8501
+pytest -q                                        # 29 testova
+python scripts/run_eval.py --no-embeddings       # metrike u reports/</pre>
+</section>
+
+</main>
+
+<footer>Damjan Halas &bull; Prirodno-matematički fakultet, Univerzitet u Novom Sadu &bull; septembar 2026 &bull; Svi predlozi sistema su informativni i nisu dijagnoza.</footer>
+
+<script>
+"use strict";
+/* ---------- normalizacija (ista logika kao program) ---------- */
+const CYR = {а:'a',б:'b',в:'v',г:'g',д:'d',ђ:'đ',е:'e',ж:'ž',з:'z',и:'i',ј:'j',к:'k',л:'l',љ:'lj',м:'m',н:'n',њ:'nj',о:'o',п:'p',р:'r',с:'s',т:'t',ћ:'ć',у:'u',ф:'f',х:'h',ц:'c',ч:'č',џ:'dž',ш:'š',А:'A',Б:'B',В:'V',Г:'G',Д:'D',Ђ:'Đ',Е:'E',Ж:'Ž',З:'Z',И:'I',Ј:'J',К:'K',Л:'L',Љ:'Lj',М:'M',Н:'N',Њ:'Nj',О:'O',П:'P',Р:'R',С:'S',Т:'T',Ћ:'Ć',У:'U',Ф:'F',Х:'H',Ц:'C',Ч:'Č',Џ:'Dž',Ш:'Š'};
+function latinica(s){ return [...s].map(c => CYR[c] || c).join(''); }
+function bezDijakritika(s){
+  return s.replace(/đ/g,'d').replace(/Đ/g,'D').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+function ocisti(s){ return s.replace(/[^a-z0-9\s]/gi,' ').replace(/\s+/g,' ').trim(); }
+function normKomplet(s){
+  const l = latinica(s), n = bezDijakritika(l.toLowerCase());
+  return {latinica:l, ascii:n, cisto:ocisti(n)};
+}
+const normUlaz = document.getElementById('normUlaz');
+const normIzlaz = document.getElementById('normIzlaz');
+function osveziNorm(){
+  const r = normKomplet(normUlaz.value);
+  normIzlaz.innerHTML = '<b>latinica:</b> ' + esc(r.latinica) +
+    '<br><b>bez dijakritika:</b> ' + esc(r.ascii) +
+    '<br><b>očišćeno:</b> ' + esc(r.cisto);
+}
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+normUlaz.addEventListener('input', osveziNorm); osveziNorm();
+
+/* ---------- fuzzy: difflib-kompatibilan ratio ---------- */
+function najduzi(a, alo, ahi, b, blo, bhi){
+  const idx = {};
+  for(let j=blo; j<bhi; j++){ (idx[b[j]] = idx[b[j]] || []).push(j); }
+  let bi=alo, bj=blo, bn=0;
+  for(let i=alo; i<ahi; i++){
+    const js = idx[a[i]] || [];
+    for(const j0 of js){
+      if(j0 < blo) continue;
+      if(j0 >= bhi) break;
+      let k = 1;
+      while(i+k<ahi && j0+k<bhi && a[i+k]===b[j0+k]) k++;
+      if(k > bn){ bi=i; bj=j0; bn=k; }
+    }
+  }
+  return [bi,bj,bn];
+}
+function ratio(a, b){
+  if(!a.length && !b.length) return 100;
+  if(!a.length || !b.length) return 0;
+  let stek = [[0,a.length,0,b.length]], podudaranja = 0;
+  while(stek.length){
+    const [alo,ahi,blo,bhi] = stek.pop();
+    const [i,j,n] = najduzi(a,alo,ahi,b,blo,bhi);
+    if(n){
+      podudaranja += n;
+      if(alo<i && blo<j) stek.push([alo,i,blo,j]);
+      if(i+n<ahi && j+n<bhi) stek.push([i+n,ahi,j+n,bhi]);
+    }
+  }
+  return 200*podudaranja/(a.length+b.length);
+}
+const fzA = document.getElementById('fzA'), fzB = document.getElementById('fzB');
+const fzIzlaz = document.getElementById('fzIzlaz');
+function osveziFz(){
+  const a = ocisti(bezDijakritika(fzA.value.toLowerCase()));
+  const b = ocisti(bezDijakritika(fzB.value.toLowerCase()));
+  const s = ratio(a,b);
+  const prolazi = s >= 85;
+  fzIzlaz.innerHTML = 'ratio(<b>' + esc(a) + '</b>, <b>' + esc(b) + '</b>) = <b>' +
+    s.toFixed(2) + '</b> (prag 85): ' +
+    (prolazi ? '<b style="color:var(--zeleno)">HVATA (fuzzy pogodak)</b>'
+              : '<b style="color:var(--crveno)">ODBACUJE</b>');
+}
+[fzA,fzB].forEach(e => e.addEventListener('input', osveziFz));
+document.querySelectorAll('[data-fz]').forEach(btn => btn.addEventListener('click', () => {
+  const [a,b] = btn.getAttribute('data-fz').split('|');
+  fzA.value = a; fzB.value = b; osveziFz();
+}));
+osveziFz();
+
+/* ---------- TF-IDF igracka ---------- */
+const DOK = ['boli me grlo','curi mi nos','boli me glava'];
+function tokeni(s){ return s.toLowerCase().split(/[^a-zčćžšđ]+/).filter(Boolean); }
+function osveziTf(){
+  const upit = tokeni(document.getElementById('tfq').value);
+  const korpus = DOK.map(tokeni);
+  const N = korpus.length;
+  const df = {};
+  korpus.forEach(t => new Set(t).forEach(w => df[w] = (df[w]||0)+1));
+  const idf = w => Math.log(N/(df[w]||N));
+  const vek = t => { const m = {}; t.forEach(w => m[w]=(m[w]||0)+1);
+    Object.keys(m).forEach(w => m[w] *= idf(w)); return m; };
+  const q = vek(upit);
+  const nq = Math.sqrt(Object.values(q).reduce((s,v)=>s+v*v,0));
+  let html = '';
+  korpus.forEach((t,i) => {
+    const d = vek(t);
+    let sk = 0;
+    Object.keys(q).forEach(w => sk += (q[w]||0)*(d[w]||0));
+    const nd = Math.sqrt(Object.values(d).reduce((s,v)=>s+v*v,0));
+    const cos = (nq && nd) ? sk/(nq*nd) : 0;
+    html += '<div>D' + (i+1) + ' (' + DOK[i] + '): ' + cos.toFixed(3) +
+      '<div class="traka-okvir"><div class="traka" style="width:' +
+      Math.round(cos*100) + '%">' + cos.toFixed(2) + '</div></div></div>';
+  });
+  document.getElementById('tfIzlaz').innerHTML = html;
+}
+document.getElementById('tfq').addEventListener('input', osveziTf); osveziTf();
+
+/* ---------- rangiranje: faringitis kalkulator ---------- */
+const rk1 = document.getElementById('rk1'), rk2 = document.getElementById('rk2');
+function osveziRk(){
+  const c1 = parseFloat(rk1.value), c2 = parseFloat(rk2.value);
+  document.getElementById('rk1v').textContent = c1.toFixed(2);
+  document.getElementById('rk2v').textContent = c2.toFixed(2);
+  const sirovo = 0.95*c1 + 0.70*c2;
+  const skor = Math.min(1, sirovo/3.25 + 0.02);
+  document.getElementById('rkIzlaz').innerHTML =
+    '(0.95&middot;' + c1.toFixed(2) + ' + 0.70&middot;' + c2.toFixed(2) + ') / 3.25 + 0.02 = ' +
+    '<b>' + skor.toFixed(3) + '</b> (sirovo ' + sirovo.toFixed(3) + ', 2 tipična)';
+}
+[rk1,rk2].forEach(e => e.addEventListener('input', osveziRk)); osveziRk();
+
+/* ---------- stepper kroz primer ---------- */
+const KORACI = [
+  ['1. Ulaz', 'boli me grlo i imam temperaturu 38'],
+  ['2. Normalizacija', 'boli me grlo imam temperaturu 38 (latinica, mala slova, bez dijakritika i interpunkcije)'],
+  ['3. Ekstrakcija', 'bol_u_grlu: gazetteer 1.00 (boli me grlo)<br>temperatura: gazetteer 1.00 (imam temperaturu)'],
+  ['4. Negacija', 'nema okidača: oba simptoma pozitivna, negiranih nema'],
+  ['5. Rangiranje', 'D_FARINGITIS 0.528 (2 tipična)<br>D_TONZILITIS 0.494<br>D_GRIP 0.232<br>Obrazloženje: bol_u_grlu (w=0.95), temperatura (w=0.70)'],
+  ['6. Lekovi', 'Avebol N02BE51 OTC &bull; Betadine R02AA15 OTC &bull; Argifen M01AE01 OTC<br>Disclaimer: informativni predlog, nije dijagnoza.']
+];
+const FAZE = ['Ulaz','Normalizacija','Ekstrakcija','Negacija','Rangiranje','Lekovi'];
+let korak = -1;
+const tokFaze = document.getElementById('tokFaze');
+FAZE.forEach((f,i) => {
+  const d = document.createElement('div');
+  d.className = 'faza'; d.id = 'fz' + i;
+  d.innerHTML = '<b>' + (i+1) + '</b>' + f;
+  tokFaze.appendChild(d);
+  if(i < FAZE.length-1){
+    const s = document.createElement('div');
+    s.className = 'strelica'; s.textContent = '→';
+    tokFaze.appendChild(s);
+  }
+});
+const tacke = document.getElementById('korakTacke');
+FAZE.forEach(() => { const s = document.createElement('span'); tacke.appendChild(s); });
+function prikaziKorak(){
+  document.getElementById('korakPrikaz').innerHTML =
+    '<b>' + KORACI[korak][0] + ':</b><br>' + KORACI[korak][1];
+  FAZE.forEach((_,i) => {
+    document.getElementById('fz'+i).classList.toggle('aktivna', i <= korak);
+    tacke.children[i].classList.toggle('akt', i <= korak);
+  });
+}
+document.getElementById('korakBtn').addEventListener('click', () => {
+  korak = (korak + 1) % KORACI.length; prikaziKorak();
+});
+document.getElementById('korakReset').addEventListener('click', () => {
+  korak = -1;
+  document.getElementById('korakPrikaz').textContent = 'Pritisni dugme za prvi korak.';
+  FAZE.forEach((_,i) => {
+    document.getElementById('fz'+i).classList.remove('aktivna');
+    tacke.children[i].classList.remove('akt');
+  });
+});
+</script>
+
+</body>
+</html>

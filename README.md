@@ -30,6 +30,7 @@ projekat/
     eval/           # eval skup
     raw/            # lekovi_sample.json (uzorak); pun lekovi.json (6809 zapisa) se učitava ako postoji
   tests/            # pytest testovi
+  docs/             # index.html (vizuelni demo: algoritmi + tehnologije), snimci ekrana
 ```
 
 ## Uslovi
@@ -106,6 +107,12 @@ python scripts/run_eval.py --no-embeddings
 python scripts/run_eval.py --no-embeddings --limit 20
 ```
 
+
+## Vizuelni demo (HTML)
+
+`docs/index.html` je samostalna stranica (radi offline, bez servera) koja prikazuje
+tok podataka, algoritme sa živim primerima (normalizacija, fuzzy skor, TF-IDF, kalkulator
+skora) i korišćene tehnologije. Otvori je dvoklikom u browseru.
 
 ## Podaci
 
